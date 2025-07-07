@@ -27,7 +27,7 @@ if number_of_students != 0:
 Good example:
 
 ```python
-from app.main import (
+from main import (
     KnightWithArmour,
     KnightWithoutArmour,
     SuperHeroKnightWithGun
@@ -37,8 +37,8 @@ from app.main import (
 Bad example:
 
 ```python
-from app.main import KnightWithArmour, \
-    KnightWithoutArmour, \
+from main import KnightWithArmour,
+    KnightWithoutArmour,
     SuperHeroKnightWithGun
 ```
 
