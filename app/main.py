@@ -1,8 +1,9 @@
+from typing import List
 from cafe import Cafe
 from errors import VaccineError, NotWearingMaskError
 
 
-def go_to_cafe(friends, cafe):
+def go_to_cafe(friends: List[dict], cafe: Cafe) -> str:
     """
     Перевіряє чи можуть друзі піти в кафе разом
 
@@ -34,4 +35,3 @@ def go_to_cafe(friends, cafe):
         return f"Friends should buy {masks_to_buy} masks"
     else:
         return f"Friends can go to {cafe.name}"
-# write your code here

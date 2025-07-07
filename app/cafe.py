@@ -1,15 +1,16 @@
 import datetime
-from errors import NotVaccinatedError, OutdatedVaccineError, NotWearingMaskError
+from errors import (NotVaccinatedError, OutdatedVaccineError,
+                    NotWearingMaskError)
 
 
 class Cafe:
     """Клас кафе з перевіркою COVID-19 обмежень"""
 
-    def __init__(self, name):
+    def __init__(self, name: str) -> None:
         """Ініціалізація кафе з назвою"""
         self.name = name
 
-    def visit_cafe(self, visitor):
+    def visit_cafe(self, visitor: dict) -> str:
         """
         Перевіряє чи може відвідувач увійти в кафе
 

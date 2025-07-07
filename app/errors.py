@@ -1,3 +1,4 @@
+
 class VaccineError(Exception):
     """Базовий клас для помилок, пов'язаних з вакцинацією"""
     pass
