@@ -29,8 +29,16 @@ class Cafe:
         if "vaccine" not in visitor:
             raise NotVaccinatedError("Visitor is not vaccinated")
 
+        # Перевірка, що vaccine є словником і містить expiration_date
+        vaccine = visitor["vaccine"]
+        if not isinstance(vaccine, dict):
+            raise NotVaccinatedError("Invalid vaccine data")
+
+        if "expiration_date" not in vaccine:
+            raise NotVaccinatedError("Vaccine expiration date is missing")
+
         # Перевірка терміну дії вакцини
-        expiration_date = visitor["vaccine"]["expiration_date"]
+        expiration_date = vaccine["expiration_date"]
         if expiration_date < datetime.date.today():
             raise OutdatedVaccineError("Vaccine is expired")
 
